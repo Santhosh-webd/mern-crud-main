@@ -6,8 +6,8 @@ export const Form = ({ editdata, viewdatafunction }) => {
     const [author, setAuthor] = useState("")
     const [rating, setRating] = useState("")
     const [review, setReview] = useState("")
-
-    const BASE_URL = "https://backend-mern-crud-h52h.onrender.com/"
+    
+const BASE_URL = "https://backend-mern-crud-h52h.onrender.com"
 
     useEffect(() => {
         if (editdata) {
