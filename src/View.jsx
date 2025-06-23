@@ -13,13 +13,13 @@ export const View = () => {
     const formRef = useRef(null) 
 
     useEffect(() => {
-        axios.get("https://backend-mern-crud-h52h.onrender.com/get/").then((res) => {
+        axios.get("https://backendmerncrud.netlify.app/get/").then((res) => {
             setMydetails(res.data);
         })
     }, [])
 
     function viewdatafunction() {
-        axios.get("https://backend-mern-crud-h52h.onrender.com/get/").then((res) => {
+        axios.get("https://backendmerncrud.netlify.app/get/").then((res) => {
             setMydetails(res.data)
             setEditdata(null)
         })
@@ -38,7 +38,7 @@ export const View = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`https://backend-mern-crud-h52h.onrender.com/delete/${params._id}`).then((res) => {
+                axios.delete(`https://backendmerncrud.netlify.app/delete/${params._id}`).then((res) => {
                     console.log(res.data);
                     viewdatafunction();
 
