@@ -8,11 +8,12 @@
   box-sizing: border-box;
 }
 
+/* Header Styles */
 .mainheader {
-  /* height: 50px; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  padding: 10px;
   background-color: #001011;
 }
 
@@ -20,79 +21,75 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-left: 8px;
-  padding: 4px 0px;
+  margin-bottom: 10px;
 }
 
 .headerlogoimage {
-  height: 50px;
+  height: 40px;
 }
 
 .headerlogo h4 {
   color: #E0E0E0;
   font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 22px;
-  font-style: normal;
+  font-size: 18px;
 }
 
 .inputtag {
-  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
 }
 
 .inputtag input {
-  margin-right: 10px;
-  padding: 7px 20px 7px 12px;
+  padding: 7px 15px;
+  width: 60%;
+  max-width: 300px;
   outline: none;
   border: none;
   border-radius: 5px;
   background-color: #B0B5B3;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
-.inputtag input::placeholder{
+
+.inputtag input::placeholder {
   color: #000;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 14px;
 }
-
 
 .inputtag button {
   padding: 6px 14px;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
   outline: none;
   border: none;
   border-radius: 5px;
+  margin-left: 10px;
 }
 
-/* header section ends here  */
-
-
+/* Form Styles */
 .mainheading {
   text-align: center;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 900;
   margin-bottom: 15px;
+  padding: 0 15px;
 }
 
 .mainformdiv {
   background: url(./images/formbg.gif) no-repeat center center;
   background-size: cover;
-  /* height: 80vh; */
+  padding: 20px 0;
 }
 
 .submainformdiv {
-  /* background-color: rebeccapurple; */
-  /* text-align: center; */
-  padding: 30px 0px 50px 0px;
+  padding: 20px 15px;
 }
 
 .flexbox {
@@ -107,20 +104,16 @@
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  /* background-color: red; */
-  width: 550px;
+  width: 100%;
+  max-width: 550px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
-  display: flex;
-  justify-content: center;
 }
 
-.subchildformdivbox input,.textareabox {
+.subchildformdivbox input, .textareabox {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;
-  width: 450px;
+  width: 100%;
   font-size: 16px;
   padding: 9px 15px;
   border: 2px solid #B0B5B3;
@@ -129,132 +122,286 @@
   margin-bottom: 12px;
   margin-top: 4px;
 }
-.subchildformdivbox input:focus,.textareabox:focus{
+
+.subchildformdivbox input:focus, .textareabox:focus {
   border-bottom: 2.5px solid black;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .childbox {
-  padding: 20px 0px;
+  padding: 20px;
 }
-.reviewbuttondiv{
+
+.reviewbuttondiv {
   text-align: center;
-  position: relative;
-  bottom: 5px;
+  margin-top: 15px;
 }
+
 .reviewbutton {
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 18px;
   outline: none;
   border: none;
-  /* margin-top: 10px; */
-  /* margin: 5px 0px; */
-  /* margin-bottom: 5px; */
   background-color: #011627;
   color: #fff;
   cursor: pointer;
   border-radius: 7px;
+  width: 100%;
+  max-width: 200px;
 }
-.reviewbutton:hover{
+
+.reviewbutton:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  border: none;
-  outline: none;
 }
-.formstar{
-  margin-right: 10px;
+
+.formstar {
+  font-size: 24px;
+  margin-right: 5px;
 }
-.starratingflex{
+
+.starratingflex {
   display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  gap: 20px;
-  position: relative;
-  bottom: 15px;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
 }
-.ratinglable{
-  font-size: 20px;
+
+.ratinglable {
+  font-size: 18px;
   font-weight: 400;
-  margin: 0px;
 }
+
 .childbox label {
   font-weight: 400;
   margin-bottom: 5px;
 }
-.childbox p{
+
+.childbox p {
   font-weight: 500;
-  font-size: 18px;
-  padding: 10px 0px;
+  font-size: 16px;
+  padding: 10px 0;
 }
 
+/* Media Queries */
+@media (min-width: 480px) {
+  .mainheader {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .headerlogo {
+    margin-bottom: 0;
+  }
+  
+  .inputtag {
+    justify-content: flex-end;
+    width: auto;
+  }
+  
+  .inputtag input {
+    width: auto;
+  }
+  
+  .mainheading {
+    font-size: 32px;
+  }
+  
+  .starratingflex {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .formstar {
+    font-size: 32px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainheading {
+    font-size: 40px;
+  }
+  
+  .headerlogo h4 {
+    font-size: 22px;
+  }
+  
+  .headerlogoimage {
+    height: 50px;
+  }
+  
+  .formstar {
+    font-size: 42px;
+  }
+  
+  .ratinglable {
+    font-size: 20px;
+  }
+  
+  .childbox p {
+    font-size: 18px;
+  }
+}
 
 /* view section starts here  */
-
-.bookreviewheading{
+.bookreviewheading {
   text-align: center;
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 900;
-  margin-top: 50px;
+  margin-top: 30px;
+  padding: 0 15px;
 }
 
-.reviewdisplaytable{
+.reviewdisplaytable {
   width: 100%;
   text-align: center;
-}
-.reviewdisplaytable th{
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  background-color: #023047;
-  color: #fff;
-  font-size: 19px;
-  padding: 10px;
-}
-.tablediv{
-  margin: 30px 60px 100px;
-  
-}
-.reviewdisplaytable td{
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 17px;
-  background-color: #f2efeb;
-  padding: 15px 7px;
-}
-.starmargin{
-  margin-right: 3px;
-}
-.editbutton{
-  font-size: 16px;
-  padding: 7px 18px;
-  border: none;
-  outline: none;
-  margin-right: 15px;
-  background-color: #ff7d00;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-}
-.deletebutton{
-  font-size: 16px;
-  padding: 7px 18px;
-  border: none;
-  outline: none;
-  background-color: #d62828;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
+  border-collapse: collapse;
 }
 
-.editbutton:hover,.deletebutton:hover{
+.reviewdisplaytable th {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  background-color: #023047;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.tablediv {
+  margin: 20px 15px 50px;
+  overflow-x: auto;
+}
+
+.reviewdisplaytable td {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #ccc5b9;
+  padding: 10px 5px;
+  word-break: break-word;
+}
+
+.starmargin {
+  margin-right: 2px;
+  font-size: 20px !important;
+}
+
+.editbutton, .deletebutton {
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  width: 80px;
+}
+
+.editbutton {
+  background-color: #ff7d00;
+  color: #fff;
+}
+
+.deletebutton {
+  background-color: #d62828;
+  color: #fff;
+}
+
+.editbutton:hover, .deletebutton:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 16px !important;
+}
+
+/* Column-specific styles for better mobile display */
+.book-column, .author-column, .review-column, .rating-column, .actions-column {
+  display: table-cell;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 576px) {
+  .bookreviewheading {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+  
+  .tablediv {
+    margin: 30px 30px 80px;
+  }
+  
+  .reviewdisplaytable th {
+    font-size: 17px;
+    padding: 12px;
+  }
+  
+  .reviewdisplaytable td {
+    font-size: 16px;
+    padding: 12px 8px;
+  }
+  
+  .starmargin {
+    font-size: 24px !important;
+  }
+  
+  .editbutton, .deletebutton {
+    font-size: 15px;
+    padding: 6px 12px;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .bookreviewheading {
+    font-size: 34px;
+  }
+  
+  .tablediv {
+    margin: 30px 50px 100px;
+  }
+  
+  .reviewdisplaytable th {
+    font-size: 19px;
+    padding: 15px;
+  }
+  
+  .reviewdisplaytable td {
+    font-size: 17px;
+    padding: 15px 10px;
+  }
+  
+  .starmargin {
+    font-size: 30px !important;
+    margin-right: 3px;
+  }
+  
+  .editbutton, .deletebutton {
+    font-size: 16px;
+    padding: 7px 18px;
+    margin-right: 15px;
+  }
+  
+  .no-reviews {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tablediv {
+    margin: 30px 60px 100px;
+  }
+  
+  .starmargin {
+    font-size: 40px;
+  }
 }
 
 /* footer section starts here  */
