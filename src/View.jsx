@@ -10,7 +10,7 @@ export const View = () => {
     const [searchValue, setSearchValue] = useState("")
 
     const reviewSectionRef = useRef(null)
-    const formRef = useRef(null) 
+    const formRef = useRef(null)
 
     useEffect(() => {
         axios.get("https://backend-mern-crud-h52h.onrender.com/get/").then((res) => {
@@ -113,28 +113,27 @@ export const View = () => {
                         <tbody>
                             {(searchValue ? filteredReviews : mydetails).length === 0 ? (
                                 <tr>
-                                    <td colSpan="5" style={{ textAlign: "center", padding: "20px", fontWeight: "600",fontSize:"20px" }}>
+                                    <td colSpan="5" style={{ textAlign: "center", padding: "20px", fontWeight: "600", fontSize: "20px" }}>
                                         No reviews found.
                                     </td>
                                 </tr>
                             ) : (
                                 (searchValue ? filteredReviews : mydetails).map((dd, index) => (
                                     <tr key={index}>
-                                        <td>{dd.booktitle}</td>
-                                        <td>{dd.author}</td>
-                                        <td className='particularreview'>{dd.review}</td>
-                                        <td>
+                                        <td className="book-column" data-label="Book">{dd.booktitle}</td>
+                                        <td className="author-column" data-label="Author">{dd.author}</td>
+                                        <td className="review-column" data-label="Review">{dd.review}</td>
+                                        <td className="rating-column" data-label="Rating">
                                             {[1, 2, 3, 4, 5].map((star) => (
                                                 <span key={star} className='starmargin' style={{
                                                     color: star <= dd.rating ? "#ff9500" : "#fff",
-                                                    fontSize: "40px",
                                                     WebkitTextStroke: "0.8px black",
                                                 }}>
                                                     ★
                                                 </span>
                                             ))}
                                         </td>
-                                        <td>
+                                        <td className="actions-column" data-label="Actions">
                                             <button onClick={() => handleEdit(dd)} className='editbutton'>Edit</button>
                                             <button onClick={() => deletefunction(dd)} className='deletebutton'>Delete</button>
                                         </td>
