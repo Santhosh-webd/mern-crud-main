@@ -404,6 +404,113 @@
   }
 }
 
+/* Default table styles (desktop/laptop) */
+.reviewdisplaytable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.reviewdisplaytable th, 
+.reviewdisplaytable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.reviewdisplaytable th {
+  background-color: #023047;
+  color: white;
+  font-weight: 600;
+}
+
+/* Mobile styles (will override table layout) */
+@media (max-width: 768px) {
+  .reviewdisplaytable, 
+  .reviewdisplaytable thead, 
+  .reviewdisplaytable tbody, 
+  .reviewdisplaytable th, 
+  .reviewdisplaytable td, 
+  .reviewdisplaytable tr {
+    display: block;
+    width: 100%;
+  }
+  
+  .reviewdisplaytable thead tr {
+    display: none;
+  }
+  
+  .reviewdisplaytable tr {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .reviewdisplaytable td {
+    border: none;
+    position: relative;
+    padding-left: 40%;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  
+  .reviewdisplaytable td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 35%;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Specific styling for mobile cards */
+  .reviewdisplaytable td.book-column {
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  
+  .reviewdisplaytable td.book-column:before {
+    display: none;
+  }
+  
+  .reviewdisplaytable td.author-column {
+    padding-left: 10px;
+    font-style: italic;
+    padding-bottom: 10px;
+  }
+  
+  .reviewdisplaytable td.author-column:before {
+    content: "by ";
+    font-style: normal;
+    position: static;
+    display: inline;
+  }
+  
+  .reviewdisplaytable td.rating-column {
+    padding-left: 10px;
+  }
+  
+  .reviewdisplaytable td.actions-column {
+    text-align: center;
+    padding: 15px 10px;
+  }
+  
+  .starmargin {
+    font-size: 24px;
+  }
+  
+  .editbutton, 
+  .deletebutton {
+    width: 45%;
+    margin: 0 5px;
+    padding: 8px 0;
+  }
+}
 /* footer section starts here  */
 
 .mainfooterdiv{
