@@ -6,8 +6,8 @@ export const Form = ({ editdata, viewdatafunction }) => {
     const [author, setAuthor] = useState("")
     const [rating, setRating] = useState("")
     const [review, setReview] = useState("")
-    
-const BASE_URL = "https://backend-mern-crud-h52h.onrender.com"
+
+    const BASE_URL = "https://backendmerncrud.netlify.app/"
 
     useEffect(() => {
         if (editdata) {
@@ -65,14 +65,13 @@ const BASE_URL = "https://backend-mern-crud-h52h.onrender.com"
                                     <input type="text" value={author} required placeholder='e.g., Paulo Coelho' onChange={(e) => setAuthor(e.target.value)} />
                                     <br />
                                     <label>Book's Review</label><br />
-                                    <textarea className='textareabox' rows={3} cols={58} required value={review} placeholder='Write a brief review...' onChange={(e) => setReview(e.target.value)}></textarea>
+                                    <textarea className='textareabox' rows={3} required value={review} placeholder='Write a brief review...' onChange={(e) => setReview(e.target.value)}></textarea>
                                     <br />
                                     <div className='starratingflex'>
                                         <label className='ratinglable'>Overall Rating : </label>
                                         <div className="star-rating">
                                             {[1, 2, 3, 4, 5].map((star) => (
                                                 <span key={star} onClick={() => setRating(star)} className='formstar' style={{
-                                                    fontSize: "42px",
                                                     cursor: "pointer",
                                                     WebkitTextStroke: "0.8px black",
                                                     textShadow: "0 0 2px black",
